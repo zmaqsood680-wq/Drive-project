@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most Active Users</title>
+  <link rel="stylesheet" href="assignment2.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <button id="modeBtn" onclick="toggleMode()">Light Mode</button>
+  </div>
+
+  <div class="container">
+    <h2>Most Active Users</h2>
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th id="th-name"     onclick="sortTable('name')"    ><div class="header-content">Name     <span class="arrow"><span>&#9650;</span><span>&#9660;</span></span></div></th>
+          <th id="th-email"    onclick="sortTable('email')"   ><div class="header-content">Email    <span class="arrow"><span>&#9650;</span><span>&#9660;</span></span></div></th>
+          <th id="th-username" onclick="sortTable('username')"><div class="header-content">Username <span class="arrow"><span>&#9650;</span><span>&#9660;</span></span></div></th>
+          <th id="th-country"  onclick="sortTable('country')" ><div class="header-content">Country  <span class="arrow"><span>&#9650;</span><span>&#9660;</span></span></div></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prevBtn" onclick="prevPage()">&#10094;</button>
+      <span id="pageNum">1</span>
+      <button id="nextBtn" onclick="nextPage()">&#10095;</button>
+    </div>
+  </div>
+
+<script src="assignment2.js"></script>
+</body>
+</html>
